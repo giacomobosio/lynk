@@ -3,6 +3,7 @@ import { FaSnapchatGhost, FaPodcast, FaRegCalendarAlt } from "react-icons/fa";
 import { HiGlobeAlt, HiViewGrid, HiBookOpen } from "react-icons/hi";
 import { MdAttachMoney } from "react-icons/md";
 import { RiGithubFill, RiLinkedinBoxFill, RiFacebookBoxFill, RiTwitterFill, RiTelegramFill, RiAtFill } from "react-icons/ri";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default {
   HiGlobeAlt,
@@ -19,4 +20,5 @@ export default {
   RiTwitterFill,
   RiTelegramFill,
   RiAtFill,
+  FaXTwitter,
 };
