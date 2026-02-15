@@ -78,6 +78,7 @@ export const Button: React.FC<ButtonProps> = ({
         /* evita che <span> o icone ereditino/overrideino colori globali */
         a :global(*) {
           color: ${text};
+          pointer-events: auto;
         }
 
         a:hover {
