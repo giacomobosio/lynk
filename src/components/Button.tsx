@@ -29,11 +29,15 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   children,
 }) => {
+  const safeColor = typeof color === "string" && color.length ? color : "primary.500";
+
   let rawColor: string;
-  if (color.split(".").length > 0) {
-    rawColor = theme.colors[color.split(".")[0]][color.split(".")[1]];
+
+  if (safeColor.includes(".")) {
+    const [group, shade] = safeColor.split(".");
+    rawColor = (theme.colors as any)?.[group]?.[shade] ?? safeColor;
   } else {
-    rawColor = (theme.colors[color] as string) ? (theme.colors[color] as string) : color;
+  rawColor = (theme.colors as any)?.[safeColor] ?? safeColor;
   }
 
   return (
